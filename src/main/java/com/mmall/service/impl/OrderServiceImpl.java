@@ -27,9 +27,8 @@ import com.mmall.vo.OrderItemVo;
 import com.mmall.vo.OrderProductVo;
 import com.mmall.vo.OrderVo;
 import com.mmall.vo.ShippingVo;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -47,6 +46,7 @@ import java.util.*;
  * @create: 2019-02-12 19:12
  */
 @Service("iOrderService")
+@Slf4j
 public class OrderServiceImpl implements IOrderService {
 
     private static  AlipayTradeService tradeService;
@@ -63,7 +63,7 @@ public class OrderServiceImpl implements IOrderService {
         tradeService = new AlipayTradeServiceImpl.ClientBuilder().build();
     }
 
-    private static final Logger log=LoggerFactory.getLogger(OrderServiceImpl.class);
+    //private static final Logger log=LoggerFactory.getLogger(OrderServiceImpl.class);
 
     @Autowired
     private OrderMapper orderMapper;
