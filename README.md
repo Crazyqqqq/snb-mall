@@ -1,1 +1,2 @@
-mmall_learning
+覆盖Tomcat集群 + Nginx负载均衡 + Redis分布式。
+运用SSM技术，搭建项目后台部分，包括用户、分类、商品、购物车、订单、收货、支付等模块。
